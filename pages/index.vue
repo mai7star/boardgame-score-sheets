@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <h3>テラフォーミング・マーズ</h3>
+        <h4>テラフォーミング・マーズ</h4>
       </div>
     </div>
 
@@ -10,7 +10,7 @@
       <div class="col-3 text-right">
         TR
       </div>
-      <div class="col-2 ml-auto">
+      <div class="col-5 ml-auto">
         <b-form-input v-model="input_tr" type="number" />
       </div>
       <div class="col-2 text-left">
@@ -22,7 +22,7 @@
       <div class="col-3 text-right">
         褒賞
       </div>
-      <div class="col-2 ml-auto">
+      <div class="col-4 ml-auto">
         <b-form-select v-model="input_milestone">
           <b-form-select-option :value="0">0</b-form-select-option>
           <b-form-select-option :value="1">1</b-form-select-option>
@@ -39,7 +39,7 @@
       <div class="col-3 text-right">
         称号
       </div>
-      <div class="col-6 ml-auto d-flex">
+      <div class="col-6 ml-auto">
         <b-input-group prepend="1位">
           <b-form-select v-model="input_award_1st">
             <b-form-select-option :value="0">0</b-form-select-option>
@@ -66,7 +66,7 @@
       <div class="col-3 text-right">
         緑地
       </div>
-      <div class="col-2 ml-auto">
+      <div class="col-4 ml-auto">
         <b-form-input v-model="input_greenery" type="number" />
       </div>
       <div class="col-2 text-left">
@@ -78,7 +78,7 @@
       <div class="col-3 text-right">
         都市
       </div>
-      <div class="col-6 ml-auto">
+      <div class="col-7 ml-auto">
         <b-form-textarea rows="2" v-model="input_cities" placeholder="1 2 1 ..." />
         <small class="form-text text-muted">
           各都市の点数をスペース区切りで入力。
@@ -93,7 +93,7 @@
       <div class="col-3 text-right">
         カード
       </div>
-      <div class="col-6 ml-auto">
+      <div class="col-7 ml-auto">
         <b-form-textarea rows="2" v-model="input_cards" placeholder="1 2 -1 ..." />
         <small class="form-text text-muted">
           各カードの点数をスペース区切りで入力。
@@ -105,12 +105,12 @@
     </div>
 
     <div class="row align-items-center mt-4">
-      <div class="col-3 text-right font-weight-bold h2">
+      <div class="col-3 text-right font-weight-bold h3">
         Total
       </div>
       <div class="col">
       </div>
-      <div class="col-2 text-left font-weight-bold h2">
+      <div class="col-2 text-left font-weight-bold h3">
         {{ total }}
       </div>
     </div>
