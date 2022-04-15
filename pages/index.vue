@@ -149,11 +149,11 @@
     },
 
     cities() {
-      return this.input_cities.split(/\s+/).filter(Boolean).map(e => parseInt(e, 10)).reduce((p, c) => p + c, 0)
+      return this.input_cities.split(/\s+/).map(e => parseInt(e, 10)).filter(Boolean).reduce((p, c) => p + c, 0)
     },
 
     cards() {
-      return this.input_cards.split(/\s+/).filter(Boolean).map(e => parseInt(e, 10)).reduce((p, c) => p + c, 0)
+      return this.input_cards.split(/\s+/).map(e => parseInt(e, 10)).filter(Boolean).reduce((p, c) => p + c, 0)
     },
 
     total() {
