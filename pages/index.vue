@@ -79,9 +79,9 @@
         都市
       </div>
       <div class="col-7 ml-auto">
-        <b-form-textarea rows="2" v-model="input_cities" placeholder="1 2 1 ..." />
+        <b-form-textarea rows="2" v-model="input_cities" placeholder="1,2,1 ..." />
         <small class="form-text text-muted">
-          各都市の点数をスペース区切りで入力。
+          各都市の点数をカンマ区切りで入力。
         </small>
       </div>
       <div class="col-2 text-left">
@@ -94,9 +94,9 @@
         カード
       </div>
       <div class="col-7 ml-auto">
-        <b-form-textarea rows="2" v-model="input_cards" placeholder="1 2 -1 ..." />
+        <b-form-textarea rows="2" v-model="input_cards" placeholder="1,2,-1 ..." />
         <small class="form-text text-muted">
-          各カードの点数をスペース区切りで入力。
+          各カードの点数をカンマ区切りで入力。
         </small>
       </div>
       <div class="col-2 text-left">
@@ -149,11 +149,11 @@
     },
 
     cities() {
-      return this.input_cities.split(/\s+/).map(e => parseInt(e, 10)).filter(Boolean).reduce((p, c) => p + c, 0)
+      return this.input_cities.split(/[,\s]+/).map(e => parseInt(e, 10)).filter(Boolean).reduce((p, c) => p + c, 0)
     },
 
     cards() {
-      return this.input_cards.split(/\s+/).map(e => parseInt(e, 10)).filter(Boolean).reduce((p, c) => p + c, 0)
+      return this.input_cards.split(/[,\s]+/).map(e => parseInt(e, 10)).filter(Boolean).reduce((p, c) => p + c, 0)
     },
 
     total() {
