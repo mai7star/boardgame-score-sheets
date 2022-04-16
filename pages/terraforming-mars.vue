@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <div class="row">
       <div class="col">
         <h4>テラフォーミング・マーズ</h4>
@@ -20,7 +20,7 @@
           </div>
         </div>
 
-        <div class="row align-items-center mt-1">
+        <div class="row align-items-center mt-3">
           <div class="col-3 text-right">
             褒賞
           </div>
@@ -32,7 +32,7 @@
           </div>
         </div>
 
-        <div class="row align-items-center mt-1">
+        <div class="row align-items-center mt-3">
           <div class="col-3 text-right">
             称号
           </div>
@@ -49,7 +49,7 @@
           </div>
         </div>
 
-        <div class="row align-items-center mt-1">
+        <div class="row align-items-center mt-3">
           <div class="col-3 text-right">
             緑地
           </div>
@@ -61,7 +61,7 @@
           </div>
         </div>
 
-        <div class="row align-items-center mt-1">
+        <div class="row align-items-center mt-3">
           <div class="col-3 text-right">
             都市
           </div>
@@ -76,7 +76,7 @@
           </div>
         </div>
 
-        <div class="row align-items-center mt-1">
+        <div class="row align-items-center mt-3">
           <div class="col-3 text-right">
             カード
           </div>
