@@ -25,7 +25,7 @@
             褒賞
           </div>
           <div class="col-4 ml-auto">
-            <range-select v-model="milestone" :value="1" :min="0" :max="3" />
+            <range-select v-model="milestone_wins" :value="1" :min="0" :max="3" />
           </div>
           <div class="col-2 text-left">
             {{ milestone }}
@@ -111,7 +111,7 @@
   data() {
     return {
       tr: 20,
-      milestone: 0,
+      milestone_wins: 0,
       award_1st: 0,
       award_2nd: 0,
       greenery: 0,
@@ -121,6 +121,10 @@
   },
 
   computed: {
+    milestone() {
+      return this.milestone_wins * 5
+    },
+
     award() {
       return this.award_1st * 5 + this.award_2nd * 2
     },
