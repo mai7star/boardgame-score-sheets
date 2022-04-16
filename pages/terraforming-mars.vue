@@ -126,7 +126,7 @@
     },
 
     total() {
-      return this.tr + this.milestone + this.award + this.greenery + this.cities + this.cards
+      return (this.tr || 0) + this.milestone + this.award + (this.greenery || 0) + this.cities + this.cards
     },
   }
 }
