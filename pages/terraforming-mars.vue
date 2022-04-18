@@ -22,7 +22,7 @@
 
         <div class="row align-items-center mt-3">
           <div class="col-3 text-right">
-            褒賞
+            称号
           </div>
           <div class="col-4 ml-auto">
             <range-select v-model="milestone_wins" :value="1" :min="0" :max="3" />
@@ -34,7 +34,7 @@
 
         <div class="row align-items-center mt-3">
           <div class="col-3 text-right">
-            称号
+            褒賞
           </div>
           <div class="col-6 ml-auto">
             <b-input-group prepend="1位">
@@ -81,7 +81,7 @@
             カード
           </div>
           <div class="col-7 ml-auto">
-            <sum-numbers v-model="cards" placeholder="1,2,1 ..." />
+            <sum-numbers v-model="cards" placeholder="2,-1,3 ..." />
             <small class="form-text text-muted">
               各カードの点数をカンマ区切りで入力。
             </small>
@@ -116,7 +116,7 @@
       award_2nd: 0,
       greenery: 0,
       cities: 0,
-      cards: 0,
+      cards: 0
     }
   },
 
