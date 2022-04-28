@@ -8,16 +8,11 @@
 
     <b-tabs>
       <b-tab title='score' active>
-        <div class="row align-items-center mt-3">
-          <div class="col-9 text-right">
-            残金
-          </div>
-          <div class="col-3 ml-auto">
-            <b-form-input v-model="coins" type="number" :number="true" :min="0" />
-          </div>
+        <div class="row mt-3">
+          <h5 class="col">物品</h5>
         </div>
 
-        <div class="row align-items-center mt-3">
+        <div class="row align-items-center">
           <div class="col">
             瓦礫
           </div>
@@ -54,15 +49,24 @@
         </div>
 
         <div class="row align-items-center mt-3">
-          <div class="col-9 text-right">
+          <div class="col-3 text-right">
             残金
           </div>
+
           <div class="col-3 ml-auto">
-            {{ totalCoins }}
+            <b-form-input v-model="coins" type="number" :number="true" :min="0" />
+          </div>
+
+          <div class="col-6 text-right ml-auto">
+            （売却後残金: {{ totalCoins }}）
           </div>
         </div>
 
-        <div class="row align-items-center mt-3">
+        <div class="row mt-3">
+          <h5 class="col">家</h5>
+        </div>
+
+        <div class="row align-items-center">
           <div class="col">
             瓦礫
           </div>
@@ -99,24 +103,30 @@
         </div>
 
         <div class="row align-items-center mt-3">
-          <div class="col-9 text-right">
+          <div class="col-3 text-right">
+            属州
+            <small class="form-text text-muted">
+              家がある属州の数。
+            </small>
+          </div>
+          <div class="col-3 ml-auto">
+            <b-form-input v-model.number="provinces" type="number" :number="true" :min="0" :max="20" />
+          </div>
+
+          <div class="col-3 text-right">
             入植者
+            <small class="form-text text-muted">
+              ボード上に出ている入植者の数。
+            </small>
           </div>
           <div class="col-3 ml-auto">
             <b-form-input v-model.number="colonists" type="number" :number="true" :min="2" :max="6" />
           </div>
         </div>
 
-        <div class="row align-items-center mt-3">
-          <div class="col-9 text-right">
-            家のある属州
-          </div>
-          <div class="col-3 ml-auto">
-            <b-form-input v-model.number="provinces" type="number" :number="true" :min="0" :max="20" />
-          </div>
+        <div class="row mt-3">
+          <h5 class="col">人物カード</h5>
         </div>
-
-        <hr />
 
         <div class="row align-items-center mt-3">
           <div class="col-4 text-right">
@@ -125,11 +135,11 @@
               ウェスタ
             </small>
           </div>
-          <div class="col-3 text-right">
-            {{ vestaUnit }}
-          </div>
           <div class="col-3 ml-auto">
             <b-form-input v-model="vesta.num" type="number" :number="true" :min="0" />
+          </div>
+          <div class="col-3 text-right">
+            {{ vestaUnit }}
           </div>
           <div class="col-2 text-right">
             {{ vestaTotal }}
@@ -143,11 +153,11 @@
               ユピテル
             </small>
           </div>
-          <div class="col-3 text-right">
-            {{ jvpiterUnit }}
-          </div>
           <div class="col-3 ml-auto">
             <b-form-input v-model="jvpiter.num" type="number" :number="true" :min="0" />
+          </div>
+          <div class="col-3 text-right">
+            {{ jvpiterUnit }}
           </div>
           <div class="col-2 text-right">
             {{ jvpiterTotal }}
@@ -161,11 +171,11 @@
               サトゥルヌス
             </small>
           </div>
-          <div class="col-3 text-right">
-            {{ satvrnvsUnit }}
-          </div>
           <div class="col-3 ml-auto">
             <b-form-input v-model="satvrnvs.num" type="number" :number="true" :min="0" />
+          </div>
+          <div class="col-3 text-right">
+            {{ satvrnvsUnit }}
           </div>
           <div class="col-2 text-right">
             {{ satvrnvsTotal }}
@@ -179,11 +189,11 @@
               メルクリウス
             </small>
           </div>
-          <div class="col-3 text-right">
-            {{ mercvrivsUnit }}
-          </div>
           <div class="col-3 ml-auto">
             <b-form-input v-model="mercvrivs.num" type="number" :number="true" :min="0" />
+          </div>
+          <div class="col-3 text-right">
+            {{ mercvrivsUnit }}
           </div>
           <div class="col-2 text-right">
             {{ mercvrivsTotal }}
@@ -197,11 +207,11 @@
               マルス
             </small>
           </div>
-          <div class="col-3 text-right">
-            {{ marsUnit }}
-          </div>
           <div class="col-3 ml-auto">
             <b-form-input v-model="mars.num" type="number" :number="true" :min="0" />
+          </div>
+          <div class="col-3 text-right">
+            {{ marsUnit }}
           </div>
           <div class="col-2 text-right">
             {{ marsTotal }}
@@ -271,11 +281,11 @@
       minerva: {
         selected: [],
         options: [
-          { text: '瓦礫', value: 'bricks' },
-          { text: '食料', value: 'foods' },
-          { text: '道具', value: 'tools' },
-          { text: '葡萄酒', value: 'wines' },
-          { text: '織物', value: 'cloths' },
+          { text: '瓦礫 (3)', value: 'bricks' },
+          { text: '食料 (3)', value: 'foods' },
+          { text: '道具 (3)', value: 'tools' },
+          { text: '葡萄酒 (4)', value: 'wines' },
+          { text: '織物 (5)', value: 'cloths' },
         ]
       },
       concordia: { has: false }
@@ -284,8 +294,8 @@
 
   computed: {
     totalCoins() {
-      return this.coins + this.resources.bricks * 3 + this.resources.foods * 4 + this.resources.tools * 5
-                        + this.resources.wines * 6 + this.resources.cloths * 7
+      return (this.coins || 0) + this.resources.bricks * 3 + this.resources.foods * 4 + this.resources.tools * 5
+                               + this.resources.wines * 6 + this.resources.cloths * 7
     },
 
     vestaUnit() {
