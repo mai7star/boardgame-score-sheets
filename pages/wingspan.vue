@@ -164,10 +164,10 @@
           </div>
           <div class="col-6 ml-auto">
             <b-input-group prepend="1位">
-              <range-select v-model="nectar_1st" :value="0" :min="0" :max="2" />
+              <range-select v-model="nectar_1st" :value="0" :min="0" :max="3" />
             </b-input-group>  
             <b-input-group prepend="2位">
-              <range-select v-model="nectar_2nd" :value="0" :min="0" :max="2" />
+              <range-select v-model="nectar_2nd" :value="0" :min="0" :max="3" />
             </b-input-group>  
           </div>
           <div class="col-2 text-left">
