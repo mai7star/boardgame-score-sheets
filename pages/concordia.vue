@@ -125,13 +125,13 @@
               ウェスタ
             </small>
           </div>
-          <div class="col-3 ml-auto">
+          <div class="col-3 text-right">
             {{ vestaUnit }}
           </div>
           <div class="col-3 ml-auto">
             <b-form-input v-model="vesta.num" type="number" :number="true" :min="0" />
           </div>
-          <div class="col-2 text-left">
+          <div class="col-2 text-right">
             {{ vestaTotal }}
           </div>
         </div>
@@ -143,13 +143,13 @@
               ユピテル
             </small>
           </div>
-          <div class="col-3 ml-auto">
+          <div class="col-3 text-right">
             {{ jvpiterUnit }}
           </div>
           <div class="col-3 ml-auto">
             <b-form-input v-model="jvpiter.num" type="number" :number="true" :min="0" />
           </div>
-          <div class="col-2 text-left">
+          <div class="col-2 text-right">
             {{ jvpiterTotal }}
           </div>
         </div>
@@ -161,13 +161,13 @@
               サトゥルヌス
             </small>
           </div>
-          <div class="col-3 ml-auto">
+          <div class="col-3 text-right">
             {{ satvrnvsUnit }}
           </div>
           <div class="col-3 ml-auto">
             <b-form-input v-model="satvrnvs.num" type="number" :number="true" :min="0" />
           </div>
-          <div class="col-2 text-left">
+          <div class="col-2 text-right">
             {{ satvrnvsTotal }}
           </div>
         </div>
@@ -179,13 +179,13 @@
               メルクリウス
             </small>
           </div>
-          <div class="col-3 ml-auto">
+          <div class="col-3 text-right">
             {{ mercvrivsUnit }}
           </div>
           <div class="col-3 ml-auto">
             <b-form-input v-model="mercvrivs.num" type="number" :number="true" :min="0" />
           </div>
-          <div class="col-2 text-left">
+          <div class="col-2 text-right">
             {{ mercvrivsTotal }}
           </div>
         </div>
@@ -197,13 +197,13 @@
               マルス
             </small>
           </div>
-          <div class="col-3 ml-auto">
+          <div class="col-3 text-right">
             {{ marsUnit }}
           </div>
           <div class="col-3 ml-auto">
             <b-form-input v-model="mars.num" type="number" :number="true" :min="0" />
           </div>
-          <div class="col-2 text-left">
+          <div class="col-2 text-right">
             {{ marsTotal }}
           </div>
         </div>
@@ -218,7 +218,7 @@
           <div class="col-6 ml-auto">
             <b-form-checkbox-group v-model="minerva.selected" :options="minerva.options" stacked />
           </div>
-          <div class="col-2 text-left">
+          <div class="col-2 text-right">
             {{ minervaTotal }}
           </div>
         </div>
@@ -230,10 +230,10 @@
               コンコルディア
             </small>
           </div>
-          <div class="col-3 ml-auto">
+          <div class="col-6">
             <b-form-checkbox v-model="concordia.has" />
           </div>
-          <div class="col-2 text-left">
+          <div class="col-2 text-right">
             {{ concordiaTotal }}
           </div>
         </div>
@@ -244,7 +244,7 @@
           </div>
           <div class="col">
           </div>
-          <div class="col-2 text-left font-weight-bold h3">
+          <div class="col-2 text-right font-weight-bold h3">
             {{ total }}
           </div>
         </div>
